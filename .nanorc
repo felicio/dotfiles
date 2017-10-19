@@ -1,0 +1,10 @@
+set mouse
+set tabsize 2
+set tabstospaces
+set autoindent
+set morespace
+set smooth
+
+unset nowrap
+
+#include /usr/local/share/nano/python.nanorc
