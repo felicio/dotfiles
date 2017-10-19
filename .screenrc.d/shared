@@ -1,0 +1,12 @@
+sessionname "screening"
+title "Shared screen session"
+#password [crypted password]
+
+multiuser on
+
+# Predefines the access that not yet known users will be granted to any window initially.
+aclumask ?-w
+# Predefines the access that not yet know users are granted to any command.
+aclumak ??-wx
+# Add an user with restricted acces.
+#aclchg username +x help,detach
