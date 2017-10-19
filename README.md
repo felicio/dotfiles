@@ -34,3 +34,7 @@ dot config status.showUntrackedFiles no
 ```bash
 dot add .bashrc && dot commit -m "Add .bashrc"
 ```
+
+## Credits
+
+- [this](https://news.ycombinator.com/item?id=11070797) thread at HN
