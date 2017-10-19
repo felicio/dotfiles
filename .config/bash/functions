@@ -1,0 +1,25 @@
+cdl () { cd "$1"; ls; }
+
+function work () { export wd="`pwd`"; }
+
+archive () {
+  ARCHIVE="$1".tbz2
+  FILE="$2"
+  
+  # test all arguments first
+  # ...
+  
+  
+  tar cjf "$ARCHIVE" "$FILE" && {
+    tar tvvf "$ARCHIVE" > contents.txt
+ 
+    # Generate archive's checksum
+    shasum -a 256 "$ARCHIVE" > .sha256
+  
+    # Remove file
+    rm -R "$FILE"
+  }
+  
+  unset ARCHIVE
+  unset FILE
+} 
