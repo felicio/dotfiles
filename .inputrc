@@ -1,0 +1,28 @@
+# This file controls the behaviour of line input editing for
+# programs that use the GNU Readline library.  Existing
+# programs include FTP, Bash, and GDB.
+#
+# You can re-read the inputrc file with C-x C-r.
+# Lines beginning with '#' are comments.
+
+$if Bash
+# SSH
+"\eOP": "code -n .\n"
+"\eOQ": "chrome-debug\n"
+#"\eOP": "ssh \"${SSH_HOST_1}\"\n"
+#"\eOQ": "ssh \"${SSH_HOST_2}\"\n"
+#"\e[17~": "ssh \"${SSH_HOST_3}\"\n"
+#"\e[18~": "ssh \"${SSH_HOST_4}\"\n"
+
+# Docker
+"\eOR": "docker images\n"
+"\eOS": "docker ps -a --format \"${DOCKER_PS_FORMAT}\"\n"
+"\e[19~": "docker rmi $(docker images -f dangling=true -q)\n" 
+"\e[20~": "docker rm $(docker ps -aqf "status=exited")\n"
+
+# Shell Environment
+"\e[24~": " | less\n"
+"\e[15~": "mc\n"
+$endif
+
+set completion-ignore-case on 
