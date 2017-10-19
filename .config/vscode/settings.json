@@ -1,10 +1,11 @@
-// Place your settings in this file to overwrite the default settings
 {
+  // Place your settings in this file to overwrite the default settings
   // General
   "extensions.autoUpdate": true,
   "git.autofetch": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 13,
   "vim.disableAnnoyingNeovimMessage": true,
   "zenMode.fullScreen": false,
   "zenMode.restore": true,
@@ -33,6 +34,9 @@
   "workbench.editor.swipeToNavigate": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
+  "workbench.colorCustomizations": {
+    // "statusBar.background": "#000"
+  },
   // // Files
   "files.exclude": {
     "**/.git": true,
@@ -46,7 +50,7 @@
     "*.md.txt": "markdown"
   },
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 2000,
+  "files.autoSaveDelay": 1000,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // Languages
@@ -65,23 +69,71 @@
   // "eslint.autoFixOnSave": true
   // "emmet.useNewEmmet": true,
   "emmet.includeLanguages": {
-      // "javascript": "html"
-      // "javascript": "css"
+    // "javascript": "html"
+    // "javascript": "css"
     "javascript": "javascriptreact"
-  //   "javascriptreact": "css"
+    //   "javascriptreact": "css"
   },
   // "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": false,
   // Prettier
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.jsxBracketSameLine": true,
   "prettier.trailingComma": "all",
+  //
   "debug.hideActionBar": true,
   "debug.internalConsoleOptions": "neverOpen",
   "debug.openExplorerOnEnd": true,
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-e>": false
+    "C-e>": false
+  },
+  "vim.hlsearch": true,
+  "autofold.default": 2,
+  "autofold.delay": 200,
+  "vim.foldfix": true,
+  "vim.otherModesKeyBindings": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    }
+  ],
+  "files.defaultLanguage": "javascript",
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Attach to Chrome",
+        "type": "chrome",
+        "request": "attach",
+        "port": 9222,
+        "smartStep": true,
+        "urlFilter": "localhost:*",
+        "skipFiles": [
+          "${workspaceFolder}/node_modules/**/*.js",
+          "<node_internals>/**/*.js"
+        ],
+        "webRoot": "${workspaceRoot}"
+      },
+      {
+        "name": "Launch via Node",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}"
+      },
+      {
+        "name": "Launch via Babel",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+        "program": "${file}"
+      }
+    ]
   }
 }
