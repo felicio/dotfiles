@@ -1,0 +1,102 @@
+# GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin16)
+
+# Source
+. ${HOME}/.config/bash/aliases
+. ${HOME}/.config/bash/functions
+. ${HOME}/.npm-credentials
+. /etc/bash.functions
+. /etc/vm.conf
+
+# Export
+export MANWIDTH=100
+export PS1="\[\e[1;21m\]\H\[\e[0m\]:\W \u\$ "
+export LC_ALL=en_US.UTF-8
+export EDITOR=/usr/bin/vim
+export VISUAL="$EDITOR"
+export LESS="-x4"
+export DOCKER_PS_FORMAT="table {{.Names}}\t{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+export DEV="$HOME/Documents/Developer/Projects"
+export NOTES="$HOME/Documents/Notes"
+umask 22
+PATH="/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin"
+export PATH="${PATH}:$HOME/.yarn/bin"
+
+# Subroutines
+__configure_git() {
+  . ~/git-completion.sh
+  . ~/git-prompt.sh
+  export PS1='\[\e[1;21m\]\H\[\e[0m\]:\W$(__git_ps1 " (%s)") \u\$ '
+}
+
+__configure_npm() {
+  . ~/npm-completion.sh
+}
+
+__configure_cmake() {
+  export PATH="/Applications/CMake.app/Contents/bin:${PATH}"
+}
+
+__configure_mysql() {
+  export PATH="${PATH}:/usr/local/mysql/bin"
+  local SERVICE_PATH="/Library/LaunchDaemons/com.oracle.mysql.mysqld.plist"
+
+  alias mysqlstart="sudo launchctl bootstrap system $SERVICE_PATH"
+  alias mysqlstop="sudo launchctl bootout system $SERVICE_PATH"
+}
+
+__configure_sass() {
+  export SASS_LIBSASS_PATH=/Users/Felicio/Documents/Developer/Web/libsass
+  local style="expanded"
+  local newlines="--unix-newlines"
+
+  alias sass="sass --sourcemap=none -t $style"
+  alias sassmin="sass --sourcemap=none -t compressed"
+}
+
+__configure_python() {
+	export WORKON_HOME="$HOME/.virtualenvs/python2"
+	# TODO
+}
+
+__configure_python3_6() {
+  export WORKON_HOME="$HOME/.virtualenvs"
+  export VIRTUALENVWRAPPER_PYTHON="`which python3.6`"
+	export VIRTUALENVWRAPPER_VIRTUALENV="/Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenv"
+	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE="/Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenv-clone"
+
+	source "/Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh"
+}
+
+__configure_go() {
+  export PATH=${PATH}:/usr/local/go/bin
+}
+
+#__configure_git
+#__configure_cmake
+#__configure_mysql
+#__configure_sass
+#__configure_python3_6
+#__configure_go
+#__configure_npm
+
+# Setting PATH for Python 3.6
+# The original version is saved in .profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+#export PATH
+
+# Setting PATH for Python 2.7
+# The original version is saved in .profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#export PATH
+
+# Setting PATH for Python 3.5
+# The original version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+# Git
+. "${HOME}/git-completion.bash"
+. "${HOME}/git-prompt.sh"
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\W $(__git_ps1 "(%s)")\$ '
+
