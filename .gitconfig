@@ -1,0 +1,78 @@
+[user]
+	name = Felicio Mununga
+  email = felicio@users.noreply.github.com
+  ;email = <>
+[filter "lfs"]
+	clean = git-lfs clean %f
+	required = true
+	smudge = git-lfs smudge %f
+[push]
+	default = matching
+[core]
+	pager = less -r
+	editor = /usr/bin/vim
+	excludesfile = /Users/Felicio/.gitignore_global
+	autocrlf = input
+[alias]
+	a = add
+	about = "!describe() { git config branch.\"$1\".description; }; describe"
+	b = branch
+	bb = branch -vv
+	cached = ls-files --cached
+	cat = cat-file -p
+	cm = commit
+	co = checkout
+	d = diff
+	discard = checkout --
+	edited = diff HEAD --
+	f = fetch
+	g = log --graph --decorate --oneline --date-order
+	garbage = fsck --unreachable
+	h = help
+	hash = rev-parse
+	history = log --decorate --oneline
+	l = log --decorate --oneline
+	last = log --oneline --decorate -n
+	list = config -l
+	m = merge
+	objects = cat-file --batch-check --batch-all-objects
+	p = push
+	r = remote
+	st = status --short --branch
+	staged = ls-files --stage --abbrev
+	staged = ls-files -s --abbrev=7
+	tree = ls-tree --full-tree --abbrev=7 -r
+	undo = checkout --
+	unmerged = ls-files -u
+	unstage = reset HEAD --
+	untrack = rm -r --cached
+  trim = push origin --delete
+	ai = add --interactive
+	ci = clean --interactive
+	rb = rebase -i
+	mb = merge-base
+	s = stash
+	ri = rebase -i
+	dt = difftool
+	rs = remote show
+	amend = commit --amend --no-edit
+	cf = config
+	save = stash save
+	;alias = "!f() { git config --global \"${1:---add}\" alias.\"${2:?git alias [--add | --unset] key}\"; }; f"
+[merge]
+	ff = only
+	tool = vscode
+[credential]
+	helper = osxkeychain
+[commit]
+  ;template = /Users/Felicio/.stCommitMsg
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[color]
+	diff = auto
+[pull]
+	ff = only
