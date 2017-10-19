@@ -1,6 +1,4 @@
 {
-  // Place your settings in this file to overwrite the default settings
-  // General
   "extensions.autoUpdate": true,
   "git.autofetch": false,
   "telemetry.enableTelemetry": false,
@@ -9,8 +7,6 @@
   "vim.disableAnnoyingNeovimMessage": true,
   "zenMode.fullScreen": false,
   "zenMode.restore": true,
-  // // Editor
-  // "editor.autoClosingBrackets": false,
   "editor.cursorBlinking": "smooth",
   "editor.fontSize": 13,
   "editor.hideCursorInOverviewRuler": true,
@@ -21,23 +17,16 @@
   "editor.tabSize": 2,
   "editor.snippetSuggestions": "top",
   "editor.wordWrap": "wordWrapColumn",
-  // "editor.formatOnSave": true,
   "editor.wordWrapColumn": 120,
-  // // Window
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
-  // // Workbench
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.showTabs": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
-  "workbench.colorCustomizations": {
-    // "statusBar.background": "#000"
-  },
-  // // Files
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -53,35 +42,22 @@
   "files.autoSaveDelay": 1000,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  // Languages
-  // // Python
   "[python]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4
   },
   "python.linting.enabledWithoutWorkspace": false,
-  // // Markdown
   "markdown.preview.scrollEditorWithPreview": false,
-  // // HTML
   "html.suggest.angular1": false,
   "html.suggest.ionic": false,
-  // ---
-  // "eslint.autoFixOnSave": true
-  // "emmet.useNewEmmet": true,
   "emmet.includeLanguages": {
-    // "javascript": "html"
-    // "javascript": "css"
     "javascript": "javascriptreact"
-    //   "javascriptreact": "css"
   },
-  // "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "workbench.statusBar.visible": false,
-  // Prettier
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.jsxBracketSameLine": true,
   "prettier.trailingComma": "all",
-  //
   "debug.hideActionBar": true,
   "debug.internalConsoleOptions": "neverOpen",
   "debug.openExplorerOnEnd": true,
