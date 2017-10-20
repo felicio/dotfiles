@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+# Dock
+defaults write com.apple.dock autohide -int '1'
+defaults write com.apple.dock orientation -string 'bottom'
+defaults write com.apple.dock "minimize-to-application" -int '1'
+defaults write com.apple.dock mineffect -string 'scale'
+defaults write com.apple.dock launchanim -int '0'
+defaults write com.apple.dock tilesize -int '47'
+
+# Hot Corners
+# Put Display to Sleep
+defaults write com.apple.dock "wvous-bl-corner" -int '10'
+defaults write com.apple.dock "wvous-bl-modifier" -int '0'
+
+# Terminal.app
+defaults write com.apple.terminal SecureKeyboardEntry -int '1'
+#defaults write com.apple.Terminal ShowLineMarks -int '0'
+
