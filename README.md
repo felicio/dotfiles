@@ -29,7 +29,7 @@ dot config status.showUntrackedFiles no
 
 **Commit a file:**
 ```bash
-dot add ~/.bashrc && dot commit -m "Add .bashrc"
+dot add ~/.bashrc && dot commit --message "Add .bashrc"
 ```
 
 ### Installation
