@@ -7,15 +7,15 @@ PATH="/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin"
 . ${HOME}/.config/bash/aliases
 . ${HOME}/.config/bash/functions
 . ${HOME}/.npm-credentials
-. ${HOME}/git-completion.bash
-. ${HOME}/git-prompt.sh
 . ${HOME}/.config/bash/exports
 
 # Subroutines
 __configure_git() {
-  . ~/git-completion.sh
-  . ~/git-prompt.sh
-  export PS1='\[\e[1;21m\]\H\[\e[0m\]:\W$(__git_ps1 " (%s)") \u\$ '
+  . ${HOME}/git-completion.bash
+  . ${HOME}/git-prompt.sh
+
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export PS1='\W $(__git_ps1 "(%s)")\$ '
 }
 
 __configure_npm() {
@@ -61,7 +61,7 @@ __configure_go() {
   export PATH=${PATH}:/usr/local/go/bin
 }
 
-#__configure_git
+__configure_git
 #__configure_cmake
 #__configure_mysql
 #__configure_sass

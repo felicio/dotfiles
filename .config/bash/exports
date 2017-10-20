@@ -7,6 +7,4 @@ export LESS="-x4"
 export DOCKER_PS_FORMAT="table {{.Names}}\t{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
 export NOTES="$HOME/Documents/Notes"
 export PATH="${PATH}:$HOME/.yarn/bin"
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\W $(__git_ps1 "(%s)")\$ '
 
