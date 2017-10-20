@@ -13,7 +13,7 @@ git init --bare $HOME/dotfiles.git
 
 ### Maintenance
 
-**Define alias for `git`:**
+**Define alias for** `git`**:**
 
 > Note: Store this in your Shell's startup file (e.g. `.bashrc`).
 
