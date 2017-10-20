@@ -1,25 +1,15 @@
-# GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin16)
+umask 22
+PATH="/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin"
 
-# Source
+# Sources
+. /etc/bash.functions
+. /etc/vm.conf
 . ${HOME}/.config/bash/aliases
 . ${HOME}/.config/bash/functions
 . ${HOME}/.npm-credentials
-. /etc/bash.functions
-. /etc/vm.conf
-
-# Export
-export MANWIDTH=100
-export PS1="\[\e[1;21m\]\H\[\e[0m\]:\W \u\$ "
-export LC_ALL=en_US.UTF-8
-export EDITOR=/usr/bin/vim
-export VISUAL="$EDITOR"
-export LESS="-x4"
-export DOCKER_PS_FORMAT="table {{.Names}}\t{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
-export DEV="$HOME/Documents/Developer/Projects"
-export NOTES="$HOME/Documents/Notes"
-umask 22
-PATH="/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin"
-export PATH="${PATH}:$HOME/.yarn/bin"
+. ${HOME}/git-completion.bash
+. ${HOME}/git-prompt.sh
+. ${HOME}/.config/bash/exports
 
 # Subroutines
 __configure_git() {
@@ -91,12 +81,6 @@ __configure_go() {
 
 # Setting PATH for Python 3.5
 # The original version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-export PATH
-
-# Git
-. "${HOME}/git-completion.bash"
-. "${HOME}/git-prompt.sh"
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\W $(__git_ps1 "(%s)")\$ '
+#PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+#export PATH
 
