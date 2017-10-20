@@ -5,8 +5,7 @@ Startup files put in box 📦.
 
 ### Initialization
 
-Create bare Git repository:
-
+**Create bare Git repository:**
 ```bash
 git init --bare $HOME/dotfiles.git
 ```
@@ -14,7 +13,6 @@ git init --bare $HOME/dotfiles.git
 ### Maintenance
 
 **Define alias for** `git`**:**
-
 > Note: Store this in your Shell's startup file (e.g. `.bashrc`).
 
 ```bash
@@ -25,14 +23,22 @@ This will gurrantee that `dot` AKA `git` will always find your _repository_ no m
 and will treat your home dir as _its_ working tree.
 
 **Hide untracked files:**
-
 ```bash
 dot config status.showUntrackedFiles no
 ```
 
-**Commit file:**
+**Commit a file:**
 ```bash
-dot add .bashrc && dot commit -m "Add .bashrc"
+dot add ~/.bashrc && dot commit -m "Add .bashrc"
+```
+
+### Installation
+
+**Clone repository and restore files:**
+```bash
+cd $HOME
+dot clone --bare <repository>
+dot checkout HEAD
 ```
 
 ## Credits
