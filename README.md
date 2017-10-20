@@ -1,7 +1,7 @@
 # dotfiles
 Startup files put in box 📦.
 
-## Usage
+## HOWTO
 
 ### Initialization
 
@@ -22,7 +22,7 @@ alias dot="/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
 ```
 
 This will gurrantee that `dot` AKA `git` will always find your _repository_ no matter what the current directory is
-and will treat your home dir as its working tree.
+and will treat your home dir as _its_ working tree.
 
 **Hide untracked files:**
 
@@ -37,4 +37,4 @@ dot add .bashrc && dot commit -m "Add .bashrc"
 
 ## Credits
 
-- [this](https://news.ycombinator.com/item?id=11070797) thread at HN
+- [this](https://news.ycombinator.com/item?id=11070797) thread at Hacker News
