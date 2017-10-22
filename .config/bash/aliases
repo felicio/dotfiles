@@ -24,6 +24,7 @@ alias ping="ping -oq"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-debug="nohup /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug > /dev/null &"
 alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias canary-debug="nohup /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --remote-debugging-port=9222 > /dev/null &"
 alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 alias dot="/usr/bin/git --git-dir=${HOME}/dotfiles.git --work-tree=${HOME}"
 

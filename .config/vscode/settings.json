@@ -66,8 +66,6 @@
     "C-e>": false
   },
   "vim.hlsearch": true,
-  "autofold.default": 2,
-  "autofold.delay": 200,
   "vim.foldfix": true,
   "vim.otherModesKeyBindings": [
     {
@@ -101,6 +99,7 @@
         "name": "Launch via Node",
         "type": "node",
         "request": "launch",
+        "runtimeArgs": "--experimental-modules",
         "program": "${file}"
       },
       {

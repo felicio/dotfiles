@@ -8,7 +8,7 @@
 $if Bash
 # SSH
 "\eOP": "code -n .\n"
-"\eOQ": "chrome-debug\n"
+"\eOQ": "canary-debug\n"
 #"\eOP": "ssh \"${SSH_HOST_1}\"\n"
 #"\eOQ": "ssh \"${SSH_HOST_2}\"\n"
 #"\e[17~": "ssh \"${SSH_HOST_3}\"\n"
