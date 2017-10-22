@@ -1,0 +1,7 @@
+{
+  "name": "@felicio/dotfiles",
+  "description": "Startup files put in box 📦.",
+  "author": "Felicio Mununga",
+  "private": true,
+  "repository": "github:felicio/dotfiles"
+}
