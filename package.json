@@ -1,6 +1,6 @@
 {
   "name": "@felicio/dotfiles",
-  "description": "Startup files put in box 📦.",
+  "description": "Startup files package 📦.",
   "author": "Felicio Mununga",
   "private": true,
   "repository": "github:felicio/dotfiles"

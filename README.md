@@ -1,5 +1,5 @@
 # dotfiles
-Startup files put in box 📦.
+Startup files package 📦.
 
 ## HOWTO
 
