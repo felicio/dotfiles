@@ -107,6 +107,7 @@
         "type": "node",
         "request": "launch",
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+        "runtimeArgs": ["--presets", "env"],
         "program": "${file}"
       }
     ]
