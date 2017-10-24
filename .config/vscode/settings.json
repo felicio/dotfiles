@@ -1,12 +1,7 @@
 {
-  "extensions.autoUpdate": true,
-  "git.autofetch": false,
-  "telemetry.enableTelemetry": false,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontSize": 13,
-  "vim.disableAnnoyingNeovimMessage": true,
-  "zenMode.fullScreen": false,
-  "zenMode.restore": true,
+  "debug.hideActionBar": true,
+  "debug.internalConsoleOptions": "neverOpen",
+  "debug.openExplorerOnEnd": true,
   "editor.cursorBlinking": "smooth",
   "editor.fontSize": 13,
   "editor.hideCursorInOverviewRuler": true,
@@ -14,71 +9,32 @@
   "editor.renderControlCharacters": false,
   "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
-  "editor.tabSize": 2,
   "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 120,
-  "window.newWindowDimensions": "maximized",
-  "window.restoreWindows": "all",
-  "window.zoomLevel": 0,
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Default Light+",
-  "workbench.editor.showTabs": false,
-  "workbench.editor.swipeToNavigate": true,
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.sideBar.location": "left",
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/.DS_Store": true,
-    "**/*.submodule": true,
-    "**/.sw*": true
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
   },
+  "extensions.autoUpdate": true,
   "files.associations": {
     "*.md.txt": "markdown"
   },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
+  "files.defaultLanguage": "javascript",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/.sw*": true
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4
-  },
-  "python.linting.enabledWithoutWorkspace": false,
-  "markdown.preview.scrollEditorWithPreview": false,
+  "git.autofetch": false,
   "html.suggest.angular1": false,
   "html.suggest.ionic": false,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "workbench.statusBar.visible": false,
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
-  "prettier.jsxBracketSameLine": true,
-  "prettier.trailingComma": "all",
-  "debug.hideActionBar": true,
-  "debug.internalConsoleOptions": "neverOpen",
-  "debug.openExplorerOnEnd": true,
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "C-e>": false
-  },
-  "vim.hlsearch": true,
-  "vim.foldfix": true,
-  "vim.otherModesKeyBindings": [
-    {
-      "before": ["u"],
-      "after": [],
-      "commands": [
-        {
-          "command": "undo"
-        }
-      ]
-    }
-  ],
-  "files.defaultLanguage": "javascript",
   "launch": {
     "version": "0.2.0",
     "configurations": [
@@ -111,5 +67,47 @@
         "program": "${file}"
       }
     ]
+  },
+  "markdown.preview.scrollEditorWithPreview": false,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "telemetry.enableTelemetry": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 13,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vim.foldfix": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "C-e>": false
+  },
+  "vim.hlsearch": true,
+  "vim.otherModesKeyBindings": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    }
+  ],
+  "window.newWindowDimensions": "maximized",
+  "window.restoreWindows": "all",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Default Light+",
+  "workbench.editor.showTabs": false,
+  "workbench.editor.swipeToNavigate": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": false,
+  "zenMode.fullScreen": false,
+  "zenMode.restore": true,
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
   }
 }
