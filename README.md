@@ -7,14 +7,14 @@ Startup files package 📦.
 
 Create bare Git repository:
 ```bash
-git init --bare $HOME/dotfiles.git
+git init --bare "$HOME"/dotfiles.git
 ```
 
 ### Maintenance
 
 Define alias for `git`:
 ```bash
-alias dot="/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
+alias dot='/usr/bin/git --git-dir="$HOME"/dotfiles.git --work-tree="$HOME"'
 ```
 
 > Note: Store this in your Shell's startup file (e.g. `.bashrc`).
@@ -36,7 +36,7 @@ dot add ~/.bashrc && dot commit --message "Add .bashrc"
 
 Clone repository and restore files:
 ```bash
-cd $HOME
+cd "$HOME"
 dot clone --bare <repository>
 dot checkout HEAD
 ```
