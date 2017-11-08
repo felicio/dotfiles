@@ -9,7 +9,7 @@ defaults write com.apple.dock launchanim -int '0'
 defaults write com.apple.dock tilesize -int '47'
 
 # Hot Corners
-# Put Display to Sleep
+## Put Display to Sleep
 defaults write com.apple.dock "wvous-bl-corner" -int '10'
 defaults write com.apple.dock "wvous-bl-modifier" -int '0'
 

@@ -9,9 +9,7 @@ $if Bash
 # SSH
 "\eOP": "code -n .\n"
 "\eOQ": "canary-debug\n"
-#"\eOP": "ssh \"${SSH_HOST_1}\"\n"
-#"\eOQ": "ssh \"${SSH_HOST_2}\"\n"
-#"\e[17~": "ssh \"${SSH_HOST_3}\"\n"
+"\e[17~": "npm repo\n"
 #"\e[18~": "ssh \"${SSH_HOST_4}\"\n"
 
 # Docker

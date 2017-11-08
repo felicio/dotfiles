@@ -88,5 +88,13 @@
 {
   "key": "alt+f9",
   "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+},
+{
+  "key": "alt+r",
+  "command": "workbench.action.reloadWindow"
+},
+{
+  "key": "alt+cmd+i",
+  "command": "workbench.action.toggleDevTools"
 }
 ]

@@ -18,7 +18,8 @@
   },
   "extensions.autoUpdate": true,
   "files.associations": {
-    "*.md.txt": "markdown"
+    "*.md.txt": "markdown",
+    "*.todo": "markdown"
   },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
@@ -28,7 +29,8 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/.DS_Store": true,
-    "**/.sw*": true
+    "**/.sw*": true,
+    "**/node_modules": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -94,6 +96,9 @@
       ]
     }
   ],
+  "vsicons.associations.folders": [
+    { "icon": "component", "extensions": ["containers", "hocs"], "format": "svg" }
+  ],
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
@@ -103,7 +108,7 @@
   "workbench.editor.swipeToNavigate": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "zenMode.fullScreen": false,
   "zenMode.restore": true,
   "[python]": {
