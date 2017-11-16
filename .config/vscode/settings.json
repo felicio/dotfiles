@@ -11,6 +11,7 @@
   "editor.renderWhitespace": "none",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
+  "editor.tabCompletion": true,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 120,
   "emmet.includeLanguages": {
@@ -67,6 +68,14 @@
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
         "runtimeArgs": ["--presets", "env"],
         "program": "${file}"
+      },
+      {
+        "name": "Launch via TypeScript",
+        "type": "node",
+        "request": "launch",
+        "protocol": "inspector",
+        "runtimeArgs": ["--require", "ts-node/register"],
+        "args": ["${file}"]
       }
     ]
   },
@@ -78,7 +87,6 @@
   "telemetry.enableTelemetry": false,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontSize": 13,
-  "vim.disableAnnoyingNeovimMessage": true,
   "vim.foldfix": true,
   "vim.handleKeys": {
     "<C-a>": false,
@@ -104,9 +112,12 @@
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Light+",
+  "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
   "workbench.editor.swipeToNavigate": true,
+  "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "vscode-icons",
+  "workbench.panel.location": "bottom",
   "workbench.sideBar.location": "left",
   "workbench.statusBar.visible": true,
   "zenMode.fullScreen": false,
