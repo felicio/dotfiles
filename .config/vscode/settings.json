@@ -1,7 +1,5 @@
 {
-  "debug.hideActionBar": true,
   "debug.internalConsoleOptions": "neverOpen",
-  "debug.openExplorerOnEnd": true,
   "editor.cursorBlinking": "smooth",
   "editor.fontSize": 13,
   "editor.hideCursorInOverviewRuler": true,
@@ -11,7 +9,7 @@
   "editor.renderWhitespace": "none",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "editor.tabCompletion": true,
+  "editor.tabCompletion": "on",
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 120,
   "emmet.includeLanguages": {
@@ -22,66 +20,100 @@
     "*.md.txt": "markdown",
     "*.todo": "markdown"
   },
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "files.defaultLanguage": "javascript",
+  "files.defaultLanguage": "markdown",
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
     "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.nyc_output": true,
+    "**/.svn": true,
     "**/.sw*": true,
-    "**/node_modules": true
+    "**/build": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/xunit.xml": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "git.autofetch": false,
-  "html.suggest.angular1": false,
-  "html.suggest.ionic": false,
   "launch": {
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Attach to Chrome",
-        "type": "chrome",
-        "request": "attach",
-        "port": 9222,
+        "type": "node",
+        "request": "launch",
+        "name": "Launch via CoffeeScript",
+        "runtimeVersion": "8.11.4",
+        "runtimeArgs": [
+          "--require",
+          "coffeescript/register"
+        ],
+        "args": [
+          "${file}"
+        ],
         "smartStep": true,
-        "urlFilter": "localhost:*",
         "skipFiles": [
           "${workspaceFolder}/node_modules/**/*.js",
           "<node_internals>/**/*.js"
         ],
-        "webRoot": "${workspaceRoot}"
+        "stopOnEntry": true
       },
       {
-        "name": "Launch via Node",
         "type": "node",
         "request": "launch",
-        "runtimeArgs": "--experimental-modules",
-        "program": "${file}"
+        "name": "Launch via Node",
+        "program": "${file}",
+        "skipFiles": [
+          "${workspaceFolder}/node_modules/**/*.js",
+          "<node_internals>/**/*.js"
+        ],
+        "outputCapture": "console",
+        "stopOnEntry": true
       },
       {
         "name": "Launch via Babel",
         "type": "node",
         "request": "launch",
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
-        "runtimeArgs": ["--presets", "env"],
+        "runtimeArgs": [
+          "--presets",
+          "env"
+        ],
         "program": "${file}"
       },
       {
-        "name": "Launch via TypeScript",
         "type": "node",
         "request": "launch",
+        "name": "Launch via TS Node",
         "protocol": "inspector",
-        "runtimeArgs": ["--require", "ts-node/register"],
-        "args": ["${file}"]
+        "runtimeArgs": [
+          "--require",
+          "ts-node/register"
+        ],
+        "args": [
+          "${file}"
+        ]
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch via Mocha",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/mocha",
+        "program": "${file}",
+        "skipFiles": [
+          "${workspaceFolder}/node_modules/**/*.js",
+          "${workspaceFolder}/node_modules/**/*",
+          "<node_internals>/**/*.js",
+          // "<eval>/**/*"
+          // "**/VM*"
+        ],
+        "env": {
+          "BUILD": "1"
+        }
       }
     ]
   },
-  "markdown.preview.scrollEditorWithPreview": false,
   "prettier.jsxBracketSameLine": true,
-  "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "telemetry.enableTelemetry": false,
@@ -93,37 +125,124 @@
     "C-e>": false
   },
   "vim.hlsearch": true,
-  "vim.otherModesKeyBindings": [
+  "vim.normalModeKeyBindings": [
     {
-      "before": ["u"],
+      "before": [
+        "u"
+      ],
       "after": [],
       "commands": [
         {
           "command": "undo"
         }
       ]
-    }
-  ],
-  "vsicons.associations.folders": [
-    { "icon": "component", "extensions": ["containers", "hocs"], "format": "svg" }
+    },
   ],
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
-  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Light+",
-  "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.panel.location": "bottom",
   "workbench.sideBar.location": "left",
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": false,
   "zenMode.fullScreen": false,
   "zenMode.restore": true,
   "[python]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4
-  }
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.quickSuggestions": false,
+    "editor.wordWrapColumn": 80,
+  },
+  "gitlens.blame.avatars": false,
+  "window.title": "${activeEditorShort}${separator}${rootPath}",
+  "prettier.semi": false,
+  "workbench.statusBar.feedback.visible": false,
+  "debug.openDebug": "neverOpen",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "events.configurations": [
+    {
+      "event": "onDidStartDebugSession",
+      "commands": [
+        {
+          "command": "workbench.action.toggleStatusbarVisibility",
+          "conditions": [
+            {
+              "configuration": "workbench.statusBar.visible",
+              "value": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "onDidTerminateDebugSession",
+      "commands": [
+        {
+          "command": "workbench.action.toggleStatusbarVisibility",
+          "conditions": [
+            {
+              "configuration": "workbench.statusBar.visible",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "typescript.suggestionActions.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "debug.node.autoAttach": "off",
+  "terminal.integrated.confirmOnExit": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.showExitAlert": false,
+  "workbench.activityBar.visible": false,
+  // "workbench.colorCustomizations": {
+  //   "statusBar.background": "#FFFFFF",
+  //   "statusBar.foreground": "#787878",
+  //   "statusBar.border": "#D3D3D3",
+  //   "statusBar.debuggingBackground": "#D95A1F",
+  //   "statusBar.debuggingForeground": "#FFFFFF",
+  //   "statusBar.debuggingBorder": "#D95A1F"
+  // },
+  "vim.showmodename": false,
+  "debug.showInStatusBar": "always",
+  "debug.toolBarLocation": "hidden",
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.defaultGravatarsStyle": "identicon",
+  "gitlens.hovers.avatars": false,
+  "gitlens.liveshare.allowGuestAccess": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "search.useIgnoreFiles": false,
+  "breadcrumbs.enabled": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ],
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

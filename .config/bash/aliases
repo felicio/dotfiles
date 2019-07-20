@@ -17,7 +17,8 @@ alias disk="df -PH | egrep disk"
 alias memory="top -stats pid,mem,command -n 22 -o mem"
 alias cpu="top -stats pid,cpu,command -n 22 -o cpu"
 alias ec2s='aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"'
-alias dclean="docker rmi $(docker images | awk '/^<none>/ {print $3}')"
+# Escape command substitution first prior to using
+#alias dclean='docker rmi $(docker images | awk '/^<none>/ {print $3}')'
 alias mc="mc --nocolor"
 alias grep="grep --color=always"
 alias ping="ping -oq"

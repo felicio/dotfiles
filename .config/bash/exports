@@ -5,7 +5,4 @@ export EDITOR=/usr/bin/vim
 export VISUAL="$EDITOR"
 export LESS="-x4"
 export DOCKER_PS_FORMAT="table {{.Names}}\t{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
-export NOTES="$HOME/Documents/Notes"
-export FILES="/Users/Felicio/Library/Mobile documents/com~apple~TextEdit/Documents"
 export PATH="${PATH}:$HOME/.yarn/bin"
-
