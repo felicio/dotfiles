@@ -17,7 +17,7 @@ and will treat your home directory as _its_ working tree.
 
 Hide untracked files:
 ```bash
-dot config status.showUntrackedFiles no
+dot config status.showUntrackedFiles "no"
 ```
 
 Commit a file:
@@ -39,7 +39,11 @@ alias dot='git --git-dir="$HOME/dotfiles.git" --work-tree="$HOME"'
 ```
 
 ```bash
-dot config status.showUntrackedFiles no
+dot config status.showUntrackedFiles "no"
+```
+
+```bash
+dot config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 ```
 
 Create index:

@@ -244,5 +244,6 @@
   ],
   "workbench.tree.renderIndentGuides": "none",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "markdown.preview.scrollEditorWithPreview": false
 }
