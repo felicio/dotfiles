@@ -67,9 +67,11 @@
 [commit]
   ;template = /Users/Felicio/.stCommitMsg
 [diff]
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --new-window --wait --diff $LOCAL $REMOTE
+    tool = code
+[difftool "code"]
+    cmd = code --wait --new-window --diff $LOCAL $REMOTE
+[difftool "code-insiders"]
+    cmd = code-insiders --wait --new-window --diff $LOCAL $REMOTE
 [mergetool "vscode"]
     cmd = code --new-window --wait --diff $LOCAL $REMOTE
 [color]

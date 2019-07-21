@@ -42,7 +42,7 @@
 	<key>ShouldLimitScrollback</key>
 	<integer>1</integer>
 	<key>ShowActiveProcessArgumentsInTabTitle</key>
-	<false/>
+	<true/>
 	<key>ShowActiveProcessArgumentsInTitle</key>
 	<true/>
 	<key>ShowActiveProcessInTabTitle</key>

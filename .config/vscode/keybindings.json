@@ -1,67 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
 {
-  "key": "cmd+e",
-  "command": "workbench.action.toggleStatusbarVisibility"
-},
-{
-  "key": "ctrl+w",
-  "command": "workbench.action.openWorkspaceSettings"
-}
-,{
-  "key": "alt+]",
-  "command": "workbench.action.terminal.focusNext",
-  "when": "terminalFocus"
-},{
-  "key": "alt+[",
-  "command": "workbench.action.terminal.focusPrevious",
-  "when": "terminalFocus"
-},
-{
-  "key": "cmd+r",
-  "command": "python.execInTerminal"
-},
-{
-  "key": "cmd+0",
-  "command": "workbench.action.zoomReset"
-},
-{
-  "key": "cmd+numpad0",
-  "command": "-workbench.action.zoomReset"
-},
-{
-  "key": "shift+cmd+n",
-  "command": "explorer.newFolder"
-},
-{
-  "key": "shift+cmd+n",
-  "command": "-workbench.action.newWindow"
-},
-{
-  "key": "ctrl+p",
-  "command": "git.stageSelectedRanges"
-},
-{
-  "key": "ctrl+alt+o",
-  "command": "git.unstageSelectedRanges"
-},
-{
-  "key": "shift+cmd+g",
-  "command": "workbench.view.scm"
-},
-{
-  "key": "ctrl+shift+g",
-  "command": "-workbench.view.scm"
-},
-{
-  "key": "ctrl+alt+a",
-  "command": "git.stage"
-},
-{
-  "key": "ctrl+u",
-  "command": "git.unstage"
-},
-{
   "key": "ctrl+u",
   "command": "-extension.vim_ctrl+u",
   "when": "editorTextFocus && vim.active && vim.use<C-u> && !inDebugRepl"
@@ -72,29 +11,18 @@
   "when": "listFocus"
 },
 {
-  "key": "ctrl+r",
-  "command": "workbench.action.debug.restart",
-  "when": "inDebugMode"
+  "key": "f5",
+  "command": "workbench.action.debug.selectandstart",
+  "when": "!inDebugMode"
 },
 {
-  "key": "shift+cmd+f5",
-  "command": "-workbench.action.debug.restart",
-  "when": "inDebugMode"
+  "key": "ctrl+tab",
+  "command": "workbench.action.nextPanelView",
+  "when": "panelFocus"
 },
 {
-  "key": "ctrl+r",
-  "command": "-workbench.action.openRecent"
-},
-{
-  "key": "alt+f9",
-  "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
-},
-{
-  "key": "alt+r",
-  "command": "workbench.action.reloadWindow"
-},
-{
-  "key": "alt+cmd+i",
-  "command": "workbench.action.toggleDevTools"
+  "key": "ctrl+shift+tab",
+  "command": "workbench.action.previousPanelView",
+  "when": "panelFocus"
 }
 ]

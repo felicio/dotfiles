@@ -1,2 +1,2 @@
-. $HOME/.profile
+. "$HOME/.profile"
 
