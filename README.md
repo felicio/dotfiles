@@ -1,23 +1,16 @@
 # dotfiles
-Startup files package 📦
+Startup files repository 🗄
 
-## HOWTO
+## Creating repository
 
-### Initialization
-
-Create bare Git repository:
 ```bash
 git init --bare "$HOME"/dotfiles.git
 ```
 
-### Maintenance
-
-Define alias for `git`:
+Define alias for `git` command:
 ```bash
-alias dot='/usr/bin/git --git-dir="$HOME"/dotfiles.git --work-tree="$HOME"'
+alias dot='git --git-dir="$HOME"/dotfiles.git --work-tree="$HOME"'
 ```
-
-> Note: Store this in your Shell's startup file (e.g. `.bashrc`).
 
 This will gurrantee that `dot` AKA `git` will always find your _repository_ no matter what the current directory is
 and will treat your home dir as _its_ working tree.
@@ -29,18 +22,42 @@ dot config status.showUntrackedFiles no
 
 Commit a file:
 ```bash
-dot add ~/.bashrc && dot commit --message "Add .bashrc"
+dot add "$HOME"/.bashrc
 ```
-
-### Installation
-
-Clone repository and restore files:
 ```bash
-cd "$HOME"
-dot clone --bare <repository>
-dot checkout HEAD
+dot commit --message "Add .bashrc"
 ```
 
-## Credits
+## Usage
 
-- [this](https://news.ycombinator.com/item?id=11070797) thread at Hacker News
+```bash
+git clone --bare https://github.com/<username>/dotfiles.git "$HOME"/dotfiles.git
+```
+
+```bash
+alias dot='git --git-dir="$HOME"/dotfiles.git --work-tree="$HOME"'
+```
+
+```bash
+dot config status.showUntrackedFiles no
+```
+
+Create index:
+```bash
+dot reset
+```
+
+Show working tree status:
+```bash
+dot status
+```
+
+Either start tracking changes in a new branch:
+```bash
+dot checkout -b <my-company>
+```
+
+Or checkout all files from the repository:
+```bash
+dot checkout .
+```
