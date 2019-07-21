@@ -1,28 +1,85 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-{
-  "key": "ctrl+u",
-  "command": "-extension.vim_ctrl+u",
-  "when": "editorTextFocus && vim.active && vim.use<C-u> && !inDebugRepl"
-},
-{
-  "key": "ctrl+u",
-  "command": "-list.focusPageUp",
-  "when": "listFocus"
-},
-{
-  "key": "f5",
-  "command": "workbench.action.debug.selectandstart",
-  "when": "!inDebugMode"
-},
-{
-  "key": "ctrl+tab",
-  "command": "workbench.action.nextPanelView",
-  "when": "panelFocus"
-},
-{
-  "key": "ctrl+shift+tab",
-  "command": "workbench.action.previousPanelView",
-  "when": "panelFocus"
-}
+  {
+    "key": "cmd+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "markdown.extension.checkTaskList",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "key": "alt+c",
+    "command": "-markdown.extension.checkTaskList",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "-markdown.extension.togglePreviewToSide",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "f5",
+    "command": "workbench.action.debug.selectandstart",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "gitlens.toggleLineBlame"
+  },
+  {
+    "key": "ctrl+f9",
+    "command": "debug.enableOrDisableBreakpoint"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "f3",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "cmd+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "cmd+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "alt+cmd+s",
+    "command": "-workbench.action.files.saveAll"
+  }
 ]
